@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Portfolio | Task 4</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">DevPortfolio</div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#notes">Notes</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="projects" class="section">
+        <h2>My Work Gallery</h2>
+        <div class="filter-controls">
+            <button onclick="filterProjects('all')">All</button>
+            <button onclick="filterProjects('web')">Web Dev</button>
+            <button onclick="filterProjects('design')">Design</button>
+            <select id="sortProjects" onchange="sortProjects()">
+                <option value="default">Sort by Rating</option>
+                <option value="high">High to Low</option>
+                <option value="low">Low to High</option>
+            </select>
+        </div>
+        <div class="project-grid" id="projectGrid">
+            </div>
+    </section>
+
+    <section id="notes" class="section dark-bg">
+        <h2>Quick Notes (Saved to LocalStorage)</h2>
+        <div class="note-input">
+            <input type="text" id="noteText" placeholder="Write a note...">
+            <button onclick="addNote()">Save Note</button>
+        </div>
+        <div id="noteList" class="note-container"></div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
